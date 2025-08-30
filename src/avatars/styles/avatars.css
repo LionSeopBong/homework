@@ -1,1 +1,88 @@
-/* 여기에 스타일을 구현해 주세요 */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  border: 2px solid black;
+}
+.container {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+.face {
+  position: absolute;
+  margin-top: 25px;
+  width: 64px;
+  height: 64px;
+}
+
+.face img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.status-off {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #dbdbdb;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.status-on {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #4cfe88;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.face:nth-child(1) {
+  left: calc(50% - 143px);
+  top: 100px;
+}
+.face:nth-child(2) {
+  left: calc(50% - 69px);
+  top: 100px;
+}
+.face:nth-child(3) {
+  left: calc(50% + 5px);
+  top: 100px;
+}
+.face:nth-child(4) {
+  left: calc(50% + 79px);
+  top: 100px;
+}
+.face:nth-child(5) {
+  left: calc(50% - 143px);
+  top: 174px;
+}
+.face:nth-child(6) {
+  left: calc(50% - 69px);
+  top: 174px;
+}
+.face:nth-child(7) {
+  left: calc(50% + 5px);
+  top: 174px;
+}
+.face:nth-child(8) {
+  left: calc(50% + 79px);
+  top: 174px;
+}
