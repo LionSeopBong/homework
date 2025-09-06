@@ -73,24 +73,63 @@ body {
     align-items: center;
     gap: 4px;
     margin-left: auto;
-  }
-  .onoff-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-  }
-  .check-off {
-    display: inline;
-  }
-  .check-on {
-    display: none;
-  }
-  #stay-login:checked + .onoff-label .check-on {
-    display: inline;
-  }
+    width: 100%;
+    @media (min-width: 768px) {
+      justify-content: space-between; /* 좌우 끝으로 배치 */
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .ip-card {
+        display: none;
+      }
+    }
+    .ip-card {
+      cursor: pointer;
 
-  #stay-login:checked + .onoff-label .check-off {
-    display: none;
+      .ip-toggle-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+
+      .protect-on {
+        display: none;
+        color: var(--naverGreen);
+      }
+
+      .protect-off {
+        display: inline;
+        color: var(--sliverLight);
+      }
+
+      #ip-toggle:checked + .ip-toggle-label .protect-on {
+        display: inline;
+      }
+
+      #ip-toggle:checked + .ip-toggle-label .protect-off {
+        display: none;
+      }
+    }
+
+    .onoff-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .check-off {
+      display: inline;
+    }
+    .check-on {
+      display: none;
+    }
+    #stay-login:checked + .onoff-label .check-on {
+      display: inline;
+    }
+
+    #stay-login:checked + .onoff-label .check-off {
+      display: none;
+    }
   }
 }
