@@ -1,1 +1,96 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+body {
+  margin: 15px;
+}
+
+.main-container {
+  --sliverLight: #dadada;
+  --naverGreen: #03cf5d;
+
+  display: flex;
+  padding: 70px 15px 111px 15px;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 16px;
+  color: #121212;
+  background: antiquewhite;
+  .go-home-logo {
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+
+  .input-login {
+    display: flex;
+    width: 100%;
+
+    .input-data {
+      height: 38px;
+      flex: 1;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+
+      border: 1px solid var(--sliverLight);
+      &:focus + .input-tooltip-id {
+        display: block;
+      }
+    }
+
+    .input-data::placeholder {
+      color: var(--sliverLight);
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    flex: 1;
+    background: var(--naverGreen);
+    border: 0px;
+    color: #fff;
+    padding: 16px;
+    font-weight: 600;
+  }
+  .input-tooltip-id {
+    position: absolute;
+    font-size: 12px;
+    top: 100%;
+    margin-bottom: 10px;
+    color: red;
+    display: none;
+
+    @media (max-width: 768px) {
+      margin-top: -20px;
+    }
+  }
+
+  .checkbox-on {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+  }
+  .onoff-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .check-off {
+    display: inline;
+  }
+  .check-on {
+    display: none;
+  }
+  #stay-login:checked + .onoff-label .check-on {
+    display: inline;
+  }
+
+  #stay-login:checked + .onoff-label .check-off {
+    display: none;
+  }
+}
